@@ -25,8 +25,8 @@ export class DetailsComponent implements OnInit{
   ngOnInit():void{
     this.getPokemon;
   }
-
-  get getPokemon(){
+  //Para deploy no gitpage usar public. rodar local usar get
+  public getPokemon(){
     const id = this.activatedRoute.snapshot.params['id'];
     const pokemon = this.pokeApiService.apiGetPokemon(`${this.urlPokemon}/${id}`);
     const name = this.pokeApiService.apiGetPokemon(`${this.urlName}/${id}`);
